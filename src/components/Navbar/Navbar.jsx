@@ -37,11 +37,11 @@ const Navbar = () => {
     };
 
     const menuItems = [
-        { label: 'Home', path: '/#home'},
-        { label: 'Catalog', path: '/catalog' },
-        { label: 'Services', path: '/#services' },
-        { label: 'Contact Us', path: '/#contacts' },
-        { label: 'Workflow', path: '/#workflow'},
+        { label: 'Главная', path: '/#home'},
+        { label: 'Каталог', path: '/catalog' },
+        { label: 'Услуги', path: '/#services' },
+        { label: 'Контакты', path: '/#contacts' },
+        { label: 'Процесс', path: '/#workflow'},
         { label: 'Reviews', path: '/#reviews' },
     ];
 

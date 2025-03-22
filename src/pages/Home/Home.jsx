@@ -14,19 +14,12 @@ import slider_img1 from "../../assets/images/slider_img_1.jpg";
 import slider_img2 from "../../assets/images/slider_img_2.jpg";
 import slider_img3 from "../../assets/images/slider_img_3.jpg";
 
-import advantages_delivery from "../../assets/icons/advantages_delivery.svg"
-import advantages_check from "../../assets/icons/advantages_check.svg"
-import advantages_quality from "../../assets/icons/advantages_quality.svg"
+import services_choice from "../../assets/icons/services_choice.svg"
+import services_diagnostic from "../../assets/icons/services_diagnostic.svg"
+import services_deal from "../../assets/icons/services_deal.svg"
+import services_delivery from "../../assets/icons/services_delivery.svg"
 
-import services_insurance from "../../assets/icons/services_insurance.svg"
-import services_sale from "../../assets/icons/services_sale.svg"
-import services_trade from "../../assets/icons/services_trade.svg"
-
-import catalog_preview_1 from "../../assets/images/catalog_preview_1.png";
-import catalog_preview_2 from "../../assets/images/catalog_preview_2.png";
-import catalog_preview_3 from "../../assets/images/catalog_preview_3.png";
-import catalog_preview_4 from "../../assets/images/catalog_preview_4.png";
-import catalog_preview_5 from "../../assets/images/catalog_preview_5.png";
+import about_img from "../../assets/images/aleh_miliakou.jpg"
 
 import review_img_1 from "../../assets/images/review_avatar_1.png"
 import review_img_2 from "../../assets/images/review_avatar_2.png"
@@ -37,8 +30,10 @@ import { Facebook, Instagram, Twitter, LinkedIn } from "@mui/icons-material";
 
 import data from './mock/products.json';
 import {useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 const Home = () => {
+    const navigate = useNavigate();
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -52,13 +47,15 @@ const Home = () => {
     return (
         <>
             <div className='hero-container'>
-                <p className='hero-title'>Автомобили из Европы. Надежность, проверенная опытом.</p>
+                <p className='hero-title'>Автомобили из Европы.<br/>Надежность, проверенная опытом.</p>
                 <p className='hero-text'>
-                    Мы знаем европейский рынок, понимаем его особенности и минимизируем риски.<br/>Наши клиенты получают автомобили с подтвержденной историей, полным пакетом проверок и гарантированной доставкой.<br/>Каждая сделка под нашим контролем — от поиска до передачи ключей.
+                    Мы знаем европейский рынок, понимаем его особенности и минимизируем риски.<br/>Наши клиенты получают
+                    автомобили с подтвержденной историей, полным пакетом проверок и гарантированной доставкой.<br/>Каждая
+                    сделка под нашим контролем — от поиска до передачи ключей.
                 </p>
                 <a href="#contacts">
                     <button className="hero-button">
-                        НАЙТИ МАШИНУ
+                        Выбрать автомобиль
                     </button>
                 </a>
             </div>
@@ -90,115 +87,86 @@ const Home = () => {
                     </SwiperSlide>
                 </Swiper>
             </div>
-            <h1 style={{color: 'black'}}>Чем мы занимаемся?</h1>
-            <div className="services" id = 'services'>
+            <h1 className="header" style={{color: 'black'}}>Чем мы занимаемся?</h1>
+            <div className="services" id='services'>
                 <div className="service-card">
                     <div>
-                        <object type="image/svg+xml" width="70px" data={services_insurance}></object>
-                        <p>CAR SALES</p>
+                        <object type="image/svg+xml" width="100px" height="100px" data={services_choice}></object>
                     </div>
-                    <div className="service-description">Подбор автомобилей с прозрачной историей и идеальным техническим состоянием</div>
-                </div>
-                <div className="service-card">
-                    <div>
-                        <object type="image/svg+xml" width="70px" data={services_sale}></object>
-                        <p>TRADE-IN</p>
-                    </div>
-                    <div className="service-description">Полный цикл проверки: диагностика, юридическая чистота, подтвержденный пробег.
+                    <div className="service-description">Подбор автомобилей с прозрачной историей и идеальным
+                        техническим состоянием
                     </div>
                 </div>
                 <div className="service-card">
                     <div>
-                        <object type="image/svg+xml" width="70px" data={services_trade}></object>
-                        <p>INSURANCE</p>
+                        <object type="image/svg+xml" width="100px" height="100px" data={services_diagnostic}></object>
                     </div>
-                    <div className="service-description">Организация безопасной сделки: покупка, контроль процесса, оформление документов.</div>
+                    <div className="service-description">Полный цикл проверки: диагностика, юридическая чистота,
+                        подтвержденный пробег.
+                    </div>
                 </div>
                 <div className="service-card">
                     <div>
-                        <object type="image/svg+xml" width="70px" data={services_trade}></object>
-                        <p>INSURANCE</p>
+                        <object type="image/svg+xml" width="100px" height="100px" data={services_deal}></object>
+                    </div>
+                    <div className="service-description">Организация безопасной сделки: покупка, контроль процесса,
+                        оформление документов.
+                    </div>
+                </div>
+                <div className="service-card">
+                    <div>
+                        <object type="image/svg+xml" width="100px" height="100px" data={services_delivery}></object>
                     </div>
                     <div className="service-description">Доставка без скрытых платежей и задержек в любую точку.
                     </div>
                 </div>
             </div>
+            <h1 className="header" style={{color: 'black'}}>Почему нам доверяют?</h1>
+            <p className="advantage-text">За годы работы мы помогли десяткам клиентов приобрести автомобили в Европе без
+                проблем и неожиданных рисков. <br/><br/> Мы не просто продаем машины — мы создаем доверие и обеспечиваем
+                100% прозрачность на каждом этапе.</p>
             <div className="advantage">
                 <div className="card">
-                    <object type="image/svg+xml" width="70px" data={advantages_delivery}></object>
-                    <p><b>TURNKEY DELIVERY</b></p>
-                    <p>We handle the entire process, from order placement to final delivery. You receive the
-                        ready-to-use result with no hassle.</p>
+                    <span className="index">1</span>
+                    <p><b>Только проверенные автомобили.</b> Мы не предлагаем компромиссов. Если автомобиль не
+                        соответствует нашим стандартам, он не попадает в подбор.</p>
                 </div>
                 <div className="card">
-                    <object type="image/svg+xml" width="70px" data={advantages_check}></object>
-                    <p><b>PRE-PURCHASE CAR INSPECTION</b></p>
-                    <p>We conduct a full vehicle check before you buy to ensure transparency and reliability. No hidden
-                        issues, just peace of mind.</p>
+                    <span className="index">2</span>
+                    <p><b>Экспертиза и контроль качества.</b> Мы знаем, где искать лучшие варианты и как избежать
+                        скрытых проблем</p>
                 </div>
                 <div className="card">
-                    <object type="image/svg+xml" width="70px" data={advantages_quality}></object>
-                    <p><b>QUALITY GUARANTEE</b></p>
-                    <p>We ensure that every product meets the highest standards. You can trust that your purchase is
-                        reliable and built to last.</p>
+                    <span className="index">3</span>
+                    <p><b>Гарантия честности.</b> Каждый клиент получает полную информацию о состоянии автомобиля. Без
+                        «сюрпризов» и недосказанности.</p>
                 </div>
-            </div>
-            {/*<div className="catalog-preview">*/}
-            {/*    <p className="catalog-preview-title">CATALOG <button className="view-all-button">VIEW ALL</button></p>*/}
-            {/*    <Swiper*/}
-            {/*        slidesPerView={3}*/}
-            {/*        spaceBetween={0}*/}
-            {/*        freeMode={true}*/}
-            {/*        pagination={{*/}
-            {/*            clickable: true,*/}
-            {/*        }}*/}
-            {/*        modules={[FreeMode, Pagination]}*/}
-            {/*        breakpoints={{*/}
-            {/*            1170: {*/}
-            {/*                slidesPerView: 3,*/}
-            {/*            },*/}
-            {/*            768: {*/}
-            {/*                slidesPerView: 2,*/}
-            {/*            },*/}
-            {/*            300: {*/}
-            {/*                slidesPerView: 1,*/}
-            {/*            }*/}
-            {/*        }}*/}
-            {/*        className="swiper-catalog-preview"*/}
-            {/*    >*/}
-            {/*        <SwiperSlide>*/}
-            {/*            <img src={catalog_preview_4}/>*/}
-            {/*            <p>Car 1</p>*/}
-            {/*        </SwiperSlide>*/}
-            {/*        <SwiperSlide>*/}
-            {/*            <img src={catalog_preview_5}/>*/}
-            {/*            <p>Car 1</p>*/}
-            {/*        </SwiperSlide>*/}
-            {/*        <SwiperSlide>*/}
-            {/*            <img src={catalog_preview_4}/>*/}
-            {/*            <p>Car 1</p>*/}
-            {/*        </SwiperSlide>*/}
-            {/*        <SwiperSlide>*/}
-            {/*            <img src={catalog_preview_4}/>*/}
-            {/*            <p>Car 1</p>*/}
-            {/*        </SwiperSlide>*/}
-            {/*        <SwiperSlide>*/}
-            {/*            <img src={catalog_preview_5}/>*/}
-            {/*            <p>Car 1</p>*/}
-            {/*        </SwiperSlide>*/}
-            {/*    </Swiper>*/}
-            {/*</div>*/}
-            <div className="preview-catalog">
-                <p className="catalog-preview-title">CATALOG <button className="view-all-button">VIEW ALL</button></p>
-                <PreviewSwiper products={products} />
             </div>
 
-            <div className="workflow" id = 'workflow'>
-                <h1 className="workflow-title">WORKFLOW</h1>
+            <h1 className="header" style={{color: 'black'}}>Кто мы?</h1>
+            <div className="about">
+                <img className="about-img" src={about_img} alt="Aleh Miliakou"/>
+                <p className="about-text"><span style={{color: "var(--accent-color)"}}><b>Aleh Miliakou</b></span> — 20
+                    лет в профессиональном спорте, 10 лет судейства на
+                    турнирах UFC, M1 Global, ACA, Brave FC. Дисциплина, контроль и четкие решения — основа моей работы,
+                    как в спорте, так и в бизнесе. Мы организуем сделки с таким же уровнем точности и ответственности,
+                    как судейство на мировой арене.</p>
+            </div>
+
+            <h1 className="header" style={{color: 'black'}}>Как это работает?</h1>
+            <div className="workflow" id='workflow'>
                 <div className="workflow-content">
                     <WorkFlowTimeline/>
                 </div>
             </div>
+
+            <div className="preview-catalog">
+                <p className="catalog-preview-title">КАТАЛОГ <button className="view-all-button"
+                                                                     onClick={() => navigate('/catalog')}>открыть</button>
+                </p>
+                <PreviewSwiper products={products}/>
+            </div>
+
             <div className="reviews" id="reviews">
                 <h1 className="reviews-title">REVIEWS</h1>
                 <div className="reviews-list">
@@ -209,11 +177,14 @@ const Home = () => {
                             </div>
                             <div className="review-card-author">
                                 <p className="review-card-date">October 26, 2024</p>
-                                <p className="review-card-author-name">Leonard Fischer</p>
+                                <p className="review-card-author-name">Vladislav Leonov</p>
                             </div>
                             <p className="review-card-rating">★★★★★</p>
                         </div>
-                        <p className="review-card-text">I had a great experience with MELAUTO. Their team provided exceptional customer service and made sure I was completely satisfied with my purchase. The car was exactly as described, in excellent condition, and the pricing was fair with no hidden fees. If you're looking for a trustworthy dealership, this is the place to go!</p>
+                        <p className="review-card-text">I had a great experience with MELAUTO. Their team provided
+                            exceptional customer service and made sure I was completely satisfied with my purchase. The
+                            car was exactly as described, in excellent condition, and the pricing was fair with no
+                            hidden fees. If you're looking for a trustworthy dealership, this is the place to go!</p>
                     </div>
                     <div className="review-card">
                         <div className="review-card-head">
@@ -226,7 +197,11 @@ const Home = () => {
                             </div>
                             <p className="review-card-rating">★★★★★</p>
                         </div>
-                        <p className="review-card-text">I recently purchased a car from MELAUTO, and the experience was fantastic! The staff was friendly, knowledgeable, and patient, answering all my questions and helping me choose the perfect car. The entire process, from selection to financing, was smooth and hassle-free. Highly recommended for anyone looking for a reliable vehicle and great service!</p>
+                        <p className="review-card-text">I recently purchased a car from MELAUTO, and the experience was
+                            fantastic! The staff was friendly, knowledgeable, and patient, answering all my questions
+                            and helping me choose the perfect car. The entire process, from selection to financing, was
+                            smooth and hassle-free. Highly recommended for anyone looking for a reliable vehicle and
+                            great service!</p>
                     </div>
                     <div className="review-card">
                         <div className="review-card-head">
@@ -239,23 +214,27 @@ const Home = () => {
                             </div>
                             <p className="review-card-rating">★★★★★</p>
                         </div>
-                        <p className="review-card-text">I was impressed with the wide range of cars available at MELAUTO. The team guided me through every step, from test driving to paperwork, making everything quick and easy. I drove away with my dream car the same day! Definitely recommend them to anyone looking for a stress-free car buying experience. </p>
+                        <p className="review-card-text">I was impressed with the wide range of cars available at
+                            MELAUTO. The team guided me through every step, from test driving to paperwork, making
+                            everything quick and easy. I drove away with my dream car the same day! Definitely recommend
+                            them to anyone looking for a stress-free car buying experience. </p>
                     </div>
                 </div>
             </div>
+
             <div className='form-container' id="contacts">
-                <h1 style={{fontWeight: '300'}}>CONTACT US</h1>
-                <ContactForm />
+                <h1 style={{fontWeight: '300'}}>ОСТАВИТЬ ЗАЯВКУ</h1>
+                <ContactForm/>
             </div>
             <div className='footer' id='socials'>
                 <h2 style={{fontWeight: '300'}}>
-                    SOCIALS
+                    НАШИ СОЦ. СЕТИ
                 </h2>
                 <div className='footer-icons-container'>
-                    <Facebook />
-                    <Twitter />
-                    <Instagram />
-                    <LinkedIn />
+                    <Facebook/>
+                    <Twitter/>
+                    <Instagram/>
+                    <LinkedIn/>
                 </div>
             </div>
         </>

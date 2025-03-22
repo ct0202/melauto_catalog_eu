@@ -9,6 +9,7 @@ import CarRentalIcon from '@mui/icons-material/CarRental';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import PaymentIcon from '@mui/icons-material/Payment';
 import CelebrationIcon from '@mui/icons-material/Celebration';
+import ReceiptIcon from '@mui/icons-material/Receipt';
 import BuildIcon from '@mui/icons-material/Build';
 import Typography from '@mui/material/Typography';
 
@@ -34,16 +35,12 @@ export default function WorkFlowTimeline() {
                     <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent sx={{ py: '40px', px: 4 }}>
-                    <Typography variant="h5" component="span">
-                        Consultation
-                    </Typography>
-                    <Typography fontSize="1.1rem">Discuss your needs and preferences with our expert advisors.</Typography>
+                    <Typography fontSize="1.1rem"> Вы оставляете заявку с параметрами автомобиля</Typography>
                 </TimelineContent>
             </TimelineItem>
 
             {/* Step 3: Test Drive */}
             <TimelineItem>
-
                 <TimelineSeparator>
                     <TimelineConnector />
                     <TimelineDot color="secondary" sx={{ width: 50, height: 50, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
@@ -52,10 +49,7 @@ export default function WorkFlowTimeline() {
                     <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent sx={{ py: '40px', px: 4 }}>
-                    <Typography variant="h5" component="span">
-                        Test Drive
-                    </Typography>
-                    <Typography fontSize="1.1rem">Experience your chosen vehicle on the road.</Typography>
+                    <Typography fontSize="1.1rem">Мы находим лучшие варианты, проверяем их и предоставляем полный отчет</Typography>
                 </TimelineContent>
             </TimelineItem>
 
@@ -64,51 +58,16 @@ export default function WorkFlowTimeline() {
                 <TimelineSeparator>
                     <TimelineConnector />
                     <TimelineDot color="primary" sx={{ width: 50, height: 50, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                        <BuildIcon sx={{ fontSize: 30, width: 30, height: 30}} />
+                        <ReceiptIcon sx={{ fontSize: 30, width: 30, height: 30}} />
                     </TimelineDot>
-                    <TimelineConnector />
                 </TimelineSeparator>
-                <TimelineContent sx={{ py: '40px', px: 4 }}>
-                    <Typography variant="h5" component="span">
-                        Customization & Add-ons
+                <TimelineContent sx={{ py: '0px', px: 4, paddingTop: '80px'}}>
+                    <Typography fontSize="1.1rem"> Оформляем сделку, организуем транспортировку и передачу автомобиля
                     </Typography>
-                    <Typography fontSize="1.1rem">Choose optional upgrades and accessories for your new vehicle.</Typography>
                 </TimelineContent>
             </TimelineItem>
 
             {/* Step 5: Financing & Paperwork */}
-            <TimelineItem>
-                <TimelineSeparator>
-                    <TimelineConnector />
-                    <TimelineDot color="primary" variant="outlined" sx={{ width: 50, height: 50, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                        <PaymentIcon sx={{ fontSize: 30, width: 30, height: 30}} />
-                    </TimelineDot>
-                    <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
-                </TimelineSeparator>
-                <TimelineContent sx={{ py: '40px', px: 4 }}>
-                    <Typography variant="h5" component="span">
-                        Financing & Paperwork
-                    </Typography>
-                    <Typography fontSize="1.1rem">Secure your financing and finalize all necessary documents.</Typography>
-                </TimelineContent>
-            </TimelineItem>
-
-            {/* Step 6: Vehicle Handover */}
-            <TimelineItem>
-                <TimelineSeparator>
-                    <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
-                    <TimelineDot color="accent" sx={{ width: 50, height: 50, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                        <CelebrationIcon sx={{ fontSize: 30, width: 30, height: 30}} />
-                    </TimelineDot>
-
-                </TimelineSeparator>
-                <TimelineContent sx={{ py: '40px', px: 4 }}>
-                    <Typography variant="h5" component="span">
-                        Vehicle Handover
-                    </Typography>
-                    <Typography fontSize="1.1rem">Drive home in your new car with confidence and excitement!</Typography>
-                </TimelineContent>
-            </TimelineItem>
         </Timeline>
         </ThemeProvider>
     );
