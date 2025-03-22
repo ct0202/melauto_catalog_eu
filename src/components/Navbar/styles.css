@@ -1,0 +1,41 @@
+.navbar {
+    z-index: 1100;
+    width: 100vw;
+    position: fixed;
+    font-weight: 100;
+    font-family: 'Montserrat', sans-serif !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 16px;
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    gap: 20px;
+    font-weight: bolder;
+}
+
+.logo {
+    padding-top: 10px;
+    max-width: 100px;
+}
+
+.logo-container {
+    width: 160px;
+}
