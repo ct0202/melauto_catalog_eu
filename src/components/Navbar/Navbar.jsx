@@ -16,8 +16,8 @@ import {
 import { Menu as MenuIcon } from '@mui/icons-material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-// import { Link } from "react-router-dom";
-import { Link as RouterLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import {Link as RouterLink, useNavigate} from "react-router-dom";
 import { Link as ScrollLink } from 'react-scroll';
 
 import { HashLink } from 'react-router-hash-link';
@@ -28,6 +28,7 @@ import './styles.css'
 import theme from '../../theme.js';
 
 const Navbar = () => {
+    const navigate = useNavigate();
 
     const isMobile = useMediaQuery(theme.breakpoints.down('md')); // 870px ≈ 'md'
     const [menuOpen, setMenuOpen] = useState(false);
@@ -37,11 +38,11 @@ const Navbar = () => {
     };
 
     const menuItems = [
-        { label: 'Главная', path: '/#home'},
-        { label: 'Каталог', path: '/catalog' },
-        { label: 'Услуги', path: '/#services' },
-        { label: 'Контакты', path: '/#contacts' },
-        { label: 'Процесс', path: '/#workflow'},
+        { label: 'Home', path: '/#home'},
+        { label: 'Catalog', path: '/catalog' },
+        { label: 'Services', path: '/#services' },
+        { label: 'Contacts', path: '/#contacts' },
+        { label: 'Workflow', path: '/#workflow'},
         { label: 'Reviews', path: '/#reviews' },
     ];
 
@@ -78,9 +79,15 @@ const Navbar = () => {
                     ) : (
                         <div className="items">
                             {menuItems.map((item) => (
-                                <div key={item.label}>
-                                    <span className="item-label">{item.label}</span>
-                                </div>
+                                <Button
+                                    key={item.label}
+                                    color="inherit"
+                                    component={HashLink}
+                                    to={item.path}
+                                    sx={{ '&:hover': { color: 'var(--primary-color)' } }}
+                                >
+                                    {item.label}
+                                </Button>
                             ))}
                         </div>
                     )}

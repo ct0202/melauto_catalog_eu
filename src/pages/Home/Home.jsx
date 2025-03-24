@@ -86,8 +86,8 @@ const Home = () => {
                     </SwiperSlide>
                 </Swiper>
             </div>
-            <h1 className="header" style={{color: 'black'}}>What do we do?</h1>
-            <div className="services" id='services'>
+            <h1 className="header" id='services' style={{color: 'black'}}>What do we do?</h1>
+            <div className="services">
                 <div className="service-card">
                     <div>
                         <object type="image/svg+xml" width="100px" height="100px" data={services_choice}></object>
@@ -140,8 +140,8 @@ const Home = () => {
                 <p className="about-text"><span style={{color: "var(--accent-color)"}}><b>Aleh Miliakou</b></span>— 20 years in professional sports, 10 years of refereeing UFC, M1 Global, ACA, Brave FC tournaments. Discipline, control and clear decisions are the basis of my work, both in sports and in business. We arrange transactions with the same level of accuracy and responsibility, as refereeing on the world stage.</p>
             </div>
 
-            <h1 className="header" style={{color: 'black'}}>How does it work?</h1>
-            <div className="workflow" id='workflow'>
+            <h1 className="header" style={{color: 'black'}} id='workflow'>How does it work?</h1>
+            <div className="workflow">
                 <div className="workflow-content">
                     <WorkFlowTimeline/>
                 </div>
