@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "title1": "Samochody z Europy.",
+    "title2": "Niezawodność potwierdzona doświadczeniem.",
+    "text": "Znamy rynek europejski, rozumiemy jego specyfikę i minimalizujemy ryzyko.\nNasi klienci otrzymują samochody z potwierdzoną historią, pełnym pakietem kontroli i gwarantowaną dostawą.\nKażda transakcja jest pod naszą kontrolą – od wyszukiwania po przekazanie kluczy.",
+    "button": "ZNAJDŹ MÓJ SAMOCHÓD"
+  },
+  "services": {
+    "title": "Co robimy?",
+    "items": [
+      "Dobór samochodów z przejrzystą historią i w doskonałym stanie technicznym.",
+      "Pełny cykl weryfikacji: diagnostyka, czystość prawna, potwierdzony przebieg.",
+      "Organizacja bezpiecznej transakcji: zakup, kontrola procesu, dokumentacja.",
+      "Dostawa bez ukrytych opłat i opóźnień do dowolnego miejsca."
+    ]
+  },
+  "trust": {
+    "title": "Dlaczego nam ufają?",
+    "text1": "Przez lata pomogliśmy dziesiątkom klientów kupić samochody w Europie bez problemów i niespodziewanych ryzyk.",
+    "text2": "Nie tylko sprzedajemy auta – budujemy zaufanie i zapewniamy 100% przejrzystości na każdym etapie.",
+    "items": [
+      {
+        "title": "Tylko sprawdzone samochody.",
+        "text": "Nie idziemy na kompromisy. Jeśli samochód nie spełnia naszych standardów, nie trafia do oferty."
+      },
+      {
+        "title": "Ekspertyza i kontrola jakości.",
+        "text": "Wiemy, gdzie szukać najlepszych opcji i jak unikać ukrytych problemów."
+      },
+      {
+        "title": "Gwarancja uczciwości.",
+        "text": "Każdy klient otrzymuje pełne informacje o stanie samochodu. Bez „niespodzianek” i niedopowiedzeń."
+      }
+    ]
+  },
+  "about": {
+    "title": "Kim jesteśmy?",
+    "name": "Aleh Miliakou",
+    "description": "20 lat w sporcie zawodowym, 10 lat sędziowania na turniejach UFC, M1 Global, ACA, Brave FC. Dyscyplina, kontrola i trafne decyzje to podstawa mojej pracy, zarówno w sporcie, jak i w biznesie. Organizujemy transakcje z taką samą dokładnością i odpowiedzialnością, jak sędziowanie na arenie światowej."
+  },
+  "workflow": {
+    "title": "Jak to działa?",
+    "step1": "Składasz zapytanie z parametrami samochodu",
+    "step2": "Znajdujemy najlepsze opcje, sprawdzamy je i dostarczamy pełny raport",
+    "step3": "Zawieramy umowę, organizujemy transport i przekazanie samochodu"
+  },
+  "catalog": {
+    "title": "KATALOG",
+    "button": "ZOBACZ WSZYSTKO"
+  },
+  "reviews": {
+    "title": "OPINIE",
+    "items": [
+      {
+        "date": "26 października 2024",
+        "author": "Vladislav Leonov",
+        "text": "Miałem świetne doświadczenie z MELAUTO. Ich zespół zapewnił wyjątkową obsługę klienta i upewnił się, że jestem w pełni zadowolony z zakupu. Samochód był dokładnie taki, jak opisano, w doskonałym stanie, a cena była uczciwa bez ukrytych opłat. Jeśli szukasz godnego zaufania dealera, to jest właściwe miejsce!"
+      },
+      {
+        "date": "15 czerwca 2023",
+        "author": "Emir Yıldız",
+        "text": "Niedawno kupiłem samochód od MELAUTO i było to fantastyczne doświadczenie! Personel był przyjazny, kompetentny i cierpliwy, odpowiadając na wszystkie moje pytania i pomagając mi wybrać idealne auto. Cały proces – od wyboru po finansowanie – był płynny i bezproblemowy. Gorąco polecam!"
+      },
+      {
+        "date": "25 grudnia 2024",
+        "author": "Zofia Nowak",
+        "text": "Byłam pod wrażeniem szerokiej gamy samochodów dostępnych w MELAUTO. Zespół przeprowadził mnie przez każdy etap – od jazdy próbnej po formalności, sprawiając, że wszystko przebiegło szybko i sprawnie. W ten sam dzień wyjechałam swoim wymarzonym autem! Zdecydowanie polecam każdemu, kto szuka bezstresowego zakupu samochodu."
+      }
+    ]
+  },
+  "contact": {
+    "title": "SKONTAKTUJ SIĘ Z NAMI"
+  },
+  "socials": {
+    "title": "NASZE SOCIAL MEDIA"
+  },
+  "contactForm": {
+    "fullName": "IMIĘ I NAZWISKO",
+    "fullNamePlaceholder": "Tom Green",
+    "email": "EMAIL",
+    "emailPlaceholder": "twoj.email@mail.com",
+    "phone": "NUMER TELEFONU",
+    "country": "KRAJ",
+    "chosenCar": "WYBRANY SAMOCHÓD",
+    "agreementText": "Zgadzam się na przetwarzanie tych informacji",
+    "submitButton": "WYŚLIJ"
+  }
+}

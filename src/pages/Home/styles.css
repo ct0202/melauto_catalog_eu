@@ -597,6 +597,21 @@
     gap: 20px;
 }
 
+.locale-button {
+    position: absolute;
+    padding: 10px;
+
+    top: 20px;
+    left: 20px;
+
+    background-color: rgba(0,0,0, 0.6);
+    color: white;
+    border-radius: 10px;
+    border: 1px solid;
+
+    z-index: 9999;
+}
+
 .hero-container {
     position: absolute;
     top: 0;

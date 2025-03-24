@@ -24,6 +24,8 @@ import { HashLink } from 'react-router-hash-link';
 
 import logo from "../../assets/images/logo.png";
 
+import { useLanguage } from "../../contexts/Lang.jsx";
+
 import './styles.css'
 import theme from '../../theme.js';
 
@@ -46,13 +48,20 @@ const Navbar = () => {
         { label: 'Reviews', path: '/#reviews' },
     ];
 
+    const { language, toggleLanguage } = useLanguage();
+
     return (
         <div>
             <div className="navbar">
+
+                <button className='locale-button' onClick={toggleLanguage}>
+                    {language === "en" ? "🇬🇧 English" : "🇵🇱 Polski"}
+                </button>
+
                 <div className="container">
                     <div className='logo-container'>
                         <RouterLink to="/">
-                            <img src={logo} alt='logo' className="logo" />
+                            <img src={logo} alt='logo' className="logo"/>
                         </RouterLink>
                     </div>
 
@@ -60,17 +69,18 @@ const Navbar = () => {
                     {isMobile ? (
                         <>
                             {/* Кнопка бургера */}
-                            <Box sx={{ flexGrow: 1 }} />
+                            <Box sx={{flexGrow: 1}}/>
                             <IconButton edge="end" color="secondary" onClick={toggleDrawer(true)}>
-                                <MenuIcon sx={{ color: "white" }}/>
+                                <MenuIcon sx={{color: "white"}}/>
                             </IconButton>
 
                             {/* Мобильное меню (Drawer) */}
                             <Drawer anchor="right" open={menuOpen} onClose={toggleDrawer(false)}>
                                 <List>
                                     {menuItems.map((item) => (
-                                        <ListItem button key={item.label} component={HashLink} to={item.path} onClick={toggleDrawer(false)}>
-                                            <ListItemText sx={{color: "black"}} primary={item.label} />
+                                        <ListItem button key={item.label} component={HashLink} to={item.path}
+                                                  onClick={toggleDrawer(false)}>
+                                            <ListItemText sx={{color: "black"}} primary={item.label}/>
                                         </ListItem>
                                     ))}
                                 </List>
@@ -84,7 +94,7 @@ const Navbar = () => {
                                     color="inherit"
                                     component={HashLink}
                                     to={item.path}
-                                    sx={{ '&:hover': { color: 'var(--primary-color)' } }}
+                                    sx={{'&:hover': {color: 'var(--primary-color)'}}}
                                 >
                                     {item.label}
                                 </Button>

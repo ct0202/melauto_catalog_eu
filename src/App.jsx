@@ -5,10 +5,13 @@ import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home/Home.jsx"
 import Catalog from "./pages/Catalog/Catalog.jsx"
 
+import { LanguageProvider } from "./contexts/Lang";
+
 import './App.css'
 
 function App() {
   return (
+      <LanguageProvider>
       <Router>
           <Routes>
 
@@ -35,6 +38,7 @@ function App() {
               {/*<Route path="*" element={<NotFound />} />*/}
           </Routes>
       </Router>
+      </LanguageProvider>
   )
 }
 

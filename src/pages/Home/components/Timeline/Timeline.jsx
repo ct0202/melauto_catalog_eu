@@ -12,16 +12,18 @@ import CelebrationIcon from '@mui/icons-material/Celebration';
 import ReceiptIcon from '@mui/icons-material/Receipt';
 import BuildIcon from '@mui/icons-material/Build';
 import Typography from '@mui/material/Typography';
-
 import {ThemeProvider} from '@mui/material/styles';
-
 import theme from '../../../../theme.js';
-
 import './styles.css';
 
-
+import { useLanguage } from "../../../../contexts/Lang.jsx";
+import en from "../../../../locales/en.json"
+import pl from "../../../../locales/pl.json"
 
 export default function WorkFlowTimeline() {
+    const { language } = useLanguage();
+    const localization = language === "en" ? en : pl;
+
     return (
         <ThemeProvider theme={theme}>
         <Timeline className="timeline" position="right" sx={{ '& .MuiTimelineItem-root': { minHeight: 150 } }}>
@@ -35,7 +37,7 @@ export default function WorkFlowTimeline() {
                     <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent sx={{ py: '40px', px: 4 }}>
-                    <Typography fontSize="1.1rem"> You leave a request with the parameters of the car</Typography>
+                    <Typography fontSize="1.1rem">{localization.workflow.step1}</Typography>
                 </TimelineContent>
             </TimelineItem>
 
@@ -49,7 +51,7 @@ export default function WorkFlowTimeline() {
                     <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent sx={{ py: '40px', px: 4 }}>
-                    <Typography fontSize="1.1rem">We find the best options, check them and provide a full report</Typography>
+                    <Typography fontSize="1.1rem">{localization.workflow.step2}</Typography>
                 </TimelineContent>
             </TimelineItem>
 
@@ -62,7 +64,7 @@ export default function WorkFlowTimeline() {
                     </TimelineDot>
                 </TimelineSeparator>
                 <TimelineContent sx={{ py: '0px', px: 4, paddingTop: '80px'}}>
-                    <Typography fontSize="1.1rem">We make a deal, organize the transportation and transfer of the car
+                    <Typography fontSize="1.1rem">{localization.workflow.step3}
                     </Typography>
                 </TimelineContent>
             </TimelineItem>

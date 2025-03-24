@@ -10,6 +10,9 @@ import WorkFlowTimeline from "./components/Timeline/Timeline.jsx";
 import PreviewSwiper from "./components/PreviewSwiper/PreviewSwiper.jsx";
 import ContactForm from "./components/ContactForm/ContactForm.jsx";
 
+import en from "../../locales/en.json";
+import pl from "../../locales/pl.json";
+
 import slider_img1 from "../../assets/images/slider_img_1.jpg";
 import slider_img2 from "../../assets/images/slider_img_2.jpg";
 import slider_img3 from "../../assets/images/slider_img_3.jpg";
@@ -32,9 +35,15 @@ import data from './mock/products.json';
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 
+import { useLanguage } from "../../contexts/Lang.jsx";
+
 const Home = () => {
     const navigate = useNavigate();
     const [products, setProducts] = useState([]);
+
+    const { language } = useLanguage();
+    const localization = language === "en" ? en : pl;
+
 
     useEffect(() => {
         fetch("https://api.melavto.com/get")
@@ -47,14 +56,17 @@ const Home = () => {
     return (
         <>
             <div className='hero-container'>
-                <p className='hero-title'>Cars from Europe.<br/>
-                    Reliability proven by experience.</p>
+                <p className='hero-title'>{localization.hero.title1}<br/>
+                    {localization.hero.title2}</p>
                 <p className='hero-text'>
-                    We know the European market, understand its specific features and minimize risks.<br/>Our clients receive cars with a confirmed history, a full package of checks and guaranteed delivery.<br/>Every deal is under our control - from the search to the transfer of keys.
+                    {/*We know the European market, understand its specific features and minimize risks.<br/>Our clients*/}
+                    {/*receive cars with a confirmed history, a full package of checks and guaranteed delivery.<br/>Every*/}
+                    {/*deal is under our control - from the search to the transfer of keys.*/}
+                    {localization.hero.text}
                 </p>
                 <a href="#contacts">
                     <button className="hero-button">
-                        FIND MY CAR
+                        {localization.hero.button}
                     </button>
                 </a>
             </div>
@@ -86,61 +98,61 @@ const Home = () => {
                     </SwiperSlide>
                 </Swiper>
             </div>
-            <h1 className="header" id='services' style={{color: 'black'}}>What do we do?</h1>
+            <h1 className="header" id='services' style={{color: 'black'}}>{localization.services.title}</h1>
             <div className="services">
-                <div className="service-card">
+            <div className="service-card">
                     <div>
                         <object type="image/svg+xml" width="100px" height="100px" data={services_choice}></object>
                     </div>
-                    <div className="service-description">Selection of cars with a clear history and perfect technical condition.
+                    <div className="service-description">{localization.services.items[0]}
                     </div>
                 </div>
                 <div className="service-card">
                     <div>
                         <object type="image/svg+xml" width="100px" height="100px" data={services_diagnostic}></object>
                     </div>
-                    <div className="service-description">Full cycle of verification: diagnostics, legal purity, confirmed mileage.
+                    <div className="service-description">{localization.services.items[1]}
                     </div>
                 </div>
                 <div className="service-card">
                     <div>
                         <object type="image/svg+xml" width="100px" height="100px" data={services_deal}></object>
                     </div>
-                    <div className="service-description">Organization of a secure transaction: purchase, process control, paperwork.
+                    <div className="service-description">{localization.services.items[2]}
                     </div>
                 </div>
                 <div className="service-card">
                     <div>
                         <object type="image/svg+xml" width="100px" height="100px" data={services_delivery}></object>
                     </div>
-                    <div className="service-description">Delivery without hidden fees and delays to any point.
+                    <div className="service-description">{localization.services.items[3]}
                     </div>
                 </div>
             </div>
-            <h1 className="header" style={{color: 'black'}}>Why are we trusted?</h1>
-            <p className="advantage-text">Over the years, we have helped dozens of customers purchase cars in Europe without problems and unexpected risks. <br/><br/> We don't just sell machines – we build trust and provide 100% transparency at every stage.</p>
+            <h1 className="header" style={{color: 'black'}}>{localization.trust.title}</h1>
+            <p className="advantage-text">{localization.trust.text1}<br/><br/>{localization.trust.text2}</p>
             <div className="advantage">
                 <div className="card">
                     <span className="index">1</span>
-                    <p><b>Only verified cars.</b> We do not offer compromises. If the car is not meets our standards, it does not fall into the selection.</p>
+                    <p><b>{localization.trust.items[0].title}</b>{localization.trust.items[0].text}</p>
                 </div>
                 <div className="card">
                     <span className="index">2</span>
-                    <p><b>Expertise and quality control.</b>We know where to look for the best options and how to avoid hidden problems</p>
+                    <p><b>{localization.trust.items[1].title}</b>{localization.trust.items[1].text}</p>
                 </div>
                 <div className="card">
                     <span className="index">3</span>
-                    <p><b>Guarantee of honesty.</b>Each client receives complete information about the condition of the car. Without "surprises" and understatement.</p>
+                    <p><b>{localization.trust.items[2].title}</b>{localization.trust.items[2].text}</p>
                 </div>
             </div>
 
-            <h1 className="header" style={{color: 'black'}}>Who are we?</h1>
+            <h1 className="header" style={{color: 'black'}}>{localization.about.title}</h1>
             <div className="about">
                 <img className="about-img" src={about_img} alt="Aleh Miliakou"/>
-                <p className="about-text"><span style={{color: "var(--accent-color)"}}><b>Aleh Miliakou</b></span>— 20 years in professional sports, 10 years of refereeing UFC, M1 Global, ACA, Brave FC tournaments. Discipline, control and clear decisions are the basis of my work, both in sports and in business. We arrange transactions with the same level of accuracy and responsibility, as refereeing on the world stage.</p>
+                <p className="about-text"><span style={{color: "var(--accent-color)"}}><b>{localization.about.name}</b></span>— {localization.about.description}</p>
             </div>
 
-            <h1 className="header" style={{color: 'black'}} id='workflow'>How does it work?</h1>
+            <h1 className="header" style={{color: 'black'}} id='workflow'>{localization.workflow.title}</h1>
             <div className="workflow">
                 <div className="workflow-content">
                     <WorkFlowTimeline/>
@@ -148,13 +160,13 @@ const Home = () => {
             </div>
 
             <div className="preview-catalog">
-                <p className="catalog-preview-title">CATALOG <button className="view-all-button" onClick={() => navigate('/catalog')}>VIEW ALL</button>
+                <p className="catalog-preview-title">{localization.catalog.title} <button className="view-all-button" onClick={() => navigate('/catalog')}>{localization.catalog.button}</button>
                 </p>
                 <PreviewSwiper products={products}/>
             </div>
 
             <div className="reviews" id="reviews">
-                <h1 className="reviews-title">REVIEWS</h1>
+                <h1 className="reviews-title">{localization.reviews.title}</h1>
                 <div className="reviews-list">
                     <div className="review-card">
                         <div className="review-card-head">
@@ -162,15 +174,12 @@ const Home = () => {
                                 <img className="review-card-img" src={review_img_1} alt="author avatar"/>
                             </div>
                             <div className="review-card-author">
-                                <p className="review-card-date">October 26, 2024</p>
-                                <p className="review-card-author-name">Vladislav Leonov</p>
+                                <p className="review-card-date">{localization.reviews.items[0].date}</p>
+                                <p className="review-card-author-name">{localization.reviews.items[0].author}</p>
                             </div>
                             <p className="review-card-rating">★★★★★</p>
                         </div>
-                        <p className="review-card-text">I had a great experience with MELAUTO. Their team provided
-                            exceptional customer service and made sure I was completely satisfied with my purchase. The
-                            car was exactly as described, in excellent condition, and the pricing was fair with no
-                            hidden fees. If you're looking for a trustworthy dealership, this is the place to go!</p>
+                        <p className="review-card-text">{localization.reviews.items[0].text}</p>
                     </div>
                     <div className="review-card">
                         <div className="review-card-head">
@@ -178,16 +187,12 @@ const Home = () => {
                                 <img className="review-card-img" src={review_img_2} alt="author avatar"/>
                             </div>
                             <div className="review-card-author">
-                                <p className="review-card-date">June 15, 2023</p>
-                                <p className="review-card-author-name">Emir Yıldız</p>
+                                <p className="review-card-date">{localization.reviews.items[1].date}</p>
+                                <p className="review-card-author-name">{localization.reviews.items[1].author}</p>
                             </div>
                             <p className="review-card-rating">★★★★★</p>
                         </div>
-                        <p className="review-card-text">I recently purchased a car from MELAUTO, and the experience was
-                            fantastic! The staff was friendly, knowledgeable, and patient, answering all my questions
-                            and helping me choose the perfect car. The entire process, from selection to financing, was
-                            smooth and hassle-free. Highly recommended for anyone looking for a reliable vehicle and
-                            great service!</p>
+                        <p className="review-card-text">{localization.reviews.items[1].text}</p>
                     </div>
                     <div className="review-card">
                         <div className="review-card-head">
@@ -195,26 +200,23 @@ const Home = () => {
                                 <img className="review-card-img" src={review_img_3} alt="author avatar"/>
                             </div>
                             <div className="review-card-author">
-                                <p className="review-card-date">December 25, 2024</p>
-                                <p className="review-card-author-name">Zofia Nowak</p>
+                                <p className="review-card-date">{localization.reviews.items[2].date}</p>
+                                <p className="review-card-author-name">{localization.reviews.items[2].author}</p>
                             </div>
                             <p className="review-card-rating">★★★★★</p>
                         </div>
-                        <p className="review-card-text">I was impressed with the wide range of cars available at
-                            MELAUTO. The team guided me through every step, from test driving to paperwork, making
-                            everything quick and easy. I drove away with my dream car the same day! Definitely recommend
-                            them to anyone looking for a stress-free car buying experience. </p>
+                        <p className="review-card-text">{localization.reviews.items[2].text}</p>
                     </div>
                 </div>
             </div>
 
             <div className='form-container' id="contacts">
-                <h1 style={{fontWeight: '300'}}>CONTACT US</h1>
+                <h1 style={{fontWeight: '300'}}>{localization.contact.title}</h1>
                 <ContactForm/>
             </div>
             <div className='footer' id='socials'>
                 <h2 style={{fontWeight: '300'}}>
-                    OUR SOCIALS
+                    {localization.socials.title}
                 </h2>
                 <div className='footer-icons-container'>
                     <Facebook/>

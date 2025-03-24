@@ -1,0 +1,79 @@
+{
+  "hero": {
+    "title1": "Cars from Europe.",
+    "title2": "Reliability proven by experience.",
+    "text": "We know the European market, understand its specific features and minimize risks.\nOur clients receive cars with a confirmed history, a full package of checks and guaranteed delivery.\nEvery deal is under our control - from the search to the transfer of keys.",
+    "button": "FIND MY CAR"
+  },
+  "services": {
+    "title": "What do we do?",
+    "items": [
+      "Selection of cars with a clear history and perfect technical condition.",
+      "Full cycle of verification: diagnostics, legal purity, confirmed mileage.",
+      "Organization of a secure transaction: purchase, process control, paperwork.",
+      "Delivery without hidden fees and delays to any point."
+    ]
+  },
+  "trust": {
+    "title": "Why are we trusted?",
+    "text1": "Over the years, we have helped dozens of customers purchase cars in Europe without problems and unexpected risks.",
+    "text2": "We don't just sell machines – we build trust and provide 100% transparency at every stage.",
+    "items": [
+      { "title": "Only verified cars.", "text": "We do not offer compromises. If the car is not meets our standards, it does not fall into the selection." },
+      { "title": "Expertise and quality control.", "text": "We know where to look for the best options and how to avoid hidden problems." },
+      { "title": "Guarantee of honesty.", "text": "Each client receives complete information about the condition of the car. Without 'surprises' and understatement." }
+    ]
+  },
+  "about": {
+    "title": "Who are we?",
+    "name": "Aleh Miliakou",
+    "description": "20 years in professional sports, 10 years of refereeing UFC, M1 Global, ACA, Brave FC tournaments. Discipline, control and clear decisions are the basis of my work, both in sports and in business. We arrange transactions with the same level of accuracy and responsibility, as refereeing on the world stage."
+  },
+  "workflow": {
+    "title": "How does it work?",
+    "step1": "You leave a request with the parameters of the car",
+    "step2": "We find the best options, check them and provide a full report",
+    "step3": "We make a deal, organize the transportation and transfer of the car"
+  },
+  "catalog": {
+    "title": "CATALOG",
+    "button": "VIEW ALL"
+  },
+  "reviews": {
+    "title": "REVIEWS",
+    "items": [
+      {
+        "date": "October 26, 2024",
+        "author": "Vladislav Leonov",
+        "text": "I had a great experience with MELAUTO. Their team provided exceptional customer service and made sure I was completely satisfied with my purchase. The car was exactly as described, in excellent condition, and the pricing was fair with no hidden fees. If you're looking for a trustworthy dealership, this is the place to go!"
+      },
+      {
+        "date": "June 15, 2023",
+        "author": "Emir Yildiz",
+        "text": "I recently purchased a car from MELAUTO, and the experience was fantastic! The staff was friendly, knowledgeable, and patient, answering all my questions and helping me choose the perfect car. The entire process, from selection to financing, was smooth and hassle-free. Highly recommended for anyone looking for a reliable vehicle and great service!"
+      },
+      {
+        "date": "December 25, 2024",
+        "author": "Zofia Nowak",
+        "text": "I was impressed with the wide range of cars available at MELAUTO. The team guided me through every step, from test driving to paperwork, making everything quick and easy. I drove away with my dream car the same day! Definitely recommend them to anyone looking for a stress-free car buying experience."
+      }
+    ]
+  },
+  "contact": {
+    "title": "CONTACT US"
+  },
+  "socials": {
+    "title": "OUR SOCIALS"
+  },
+  "contactForm": {
+    "fullName": "FULL NAME",
+    "fullNamePlaceholder": "Tom Green",
+    "email": "EMAIL",
+    "emailPlaceholder": "your.email@mail.com",
+    "phone": "PHONE",
+    "country": "COUNTRY",
+    "chosenCar": "CHOSEN CAR",
+    "agreementText": "I agree to the processing of this information",
+    "submitButton": "SUBMIT"
+  }
+}
