@@ -25,6 +25,8 @@ import { HashLink } from 'react-router-hash-link';
 import logo from "../../assets/images/logo.png";
 
 import { useLanguage } from "../../contexts/Lang.jsx";
+import en from "../../locales/en.json";
+import pl from "../../locales/pl.json";
 
 import './styles.css'
 import theme from '../../theme.js';
@@ -39,16 +41,18 @@ const Navbar = () => {
         setMenuOpen(open);
     };
 
+    const { language, toggleLanguage } = useLanguage();
+
+
     const menuItems = [
-        { label: 'Home', path: '/#home'},
-        { label: 'Catalog', path: '/catalog' },
-        { label: 'Services', path: '/#services' },
-        { label: 'Contacts', path: '/#contacts' },
-        { label: 'Workflow', path: '/#workflow'},
-        { label: 'Reviews', path: '/#reviews' },
+        { label: language === 'en' ? 'Home' : 'Strona główna', path: '/#home' },
+        { label: language === 'en' ? 'Catalog' : 'Katalog', path: '/catalog' },
+        { label: language === 'en' ? 'Services' : 'Usługi', path: '/#services' },
+        { label: language === 'en' ? 'Contacts' : 'Kontakty', path: '/#contacts' },
+        { label: language === 'en' ? 'Workflow' : 'Przepływ pracy', path: '/#workflow' },
+        { label: language === 'en' ? 'Reviews' : 'Opinie', path: '/#reviews' }
     ];
 
-    const { language, toggleLanguage } = useLanguage();
 
     return (
         <div>
