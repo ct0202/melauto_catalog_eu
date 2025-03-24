@@ -29,27 +29,27 @@ const contactForm = () => {
     return (
         <form className="form-main" action={Apply}>
             <div className="form-group">
-                <label className="text-input-label">ФИО</label>
+                <label className="text-input-label">FULL NAME</label>
                 <input placeholder="Tom Green" className="text-input" name="fullName" value={formData.fullName} onChange={handleInputChange} />
 
-                <label className="text-input-label">ПОЧТА</label>
+                <label className="text-input-label">EMAIL</label>
                 <input placeholder="your.email@mail.com" className="text-input" name="email" value={formData.email}  onChange={handleInputChange} />
             </div>
 
             <div className="form-group">
-                <label className="text-input-label">НОМЕР</label>
+                <label className="text-input-label">PHONE</label>
                 <input className="text-input" name="phone" value={formData.phone}  onChange={handleInputChange} />
 
-                <label className="text-input-label">СТРАНА</label>
-                <input placeholder="USA" className="text-input" name="country" value={formData.country} onChange={handleInputChange} />
+                <label className="text-input-label">COUNTRY</label>
+                <input className="text-input" name="country" value={formData.country} onChange={handleInputChange} />
             </div>
 
             <div className="form-group-3">
-                <label>ВЫБРАННЫЙ АВТОМОБИЛЬ</label>
+                <label>CHOSEN CAR</label>
                 <textarea className="text-area-input" rows="2" cols="30" name="choice" value={formData.choice}  onChange={handleInputChange} />
 
                 <div style={{dispay: "flex", gap: "20px", flexDirection: "row"}}>
-                    <label>Я соглашаюсь на обработку данной информации</label>
+                    <label>I agree to the processing of this information</label>
                     <input type="checkbox" name="agreement" value={formData.agreement}  onChange={handleInputChange}  />
                 </div>
             </div>

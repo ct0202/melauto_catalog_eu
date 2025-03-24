@@ -35,7 +35,7 @@ export default function WorkFlowTimeline() {
                     <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent sx={{ py: '40px', px: 4 }}>
-                    <Typography fontSize="1.1rem"> Вы оставляете заявку с параметрами автомобиля</Typography>
+                    <Typography fontSize="1.1rem"> You leave a request with the parameters of the car</Typography>
                 </TimelineContent>
             </TimelineItem>
 
@@ -49,7 +49,7 @@ export default function WorkFlowTimeline() {
                     <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent sx={{ py: '40px', px: 4 }}>
-                    <Typography fontSize="1.1rem">Мы находим лучшие варианты, проверяем их и предоставляем полный отчет</Typography>
+                    <Typography fontSize="1.1rem">We find the best options, check them and provide a full report</Typography>
                 </TimelineContent>
             </TimelineItem>
 
@@ -62,7 +62,7 @@ export default function WorkFlowTimeline() {
                     </TimelineDot>
                 </TimelineSeparator>
                 <TimelineContent sx={{ py: '0px', px: 4, paddingTop: '80px'}}>
-                    <Typography fontSize="1.1rem"> Оформляем сделку, организуем транспортировку и передачу автомобиля
+                    <Typography fontSize="1.1rem">We make a deal, organize the transportation and transfer of the car
                     </Typography>
                 </TimelineContent>
             </TimelineItem>

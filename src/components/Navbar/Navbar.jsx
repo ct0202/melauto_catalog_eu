@@ -60,8 +60,8 @@ const Navbar = () => {
                         <>
                             {/* Кнопка бургера */}
                             <Box sx={{ flexGrow: 1 }} />
-                            <IconButton edge="end" color="inherit" onClick={toggleDrawer(true)}>
-                                <MenuIcon />
+                            <IconButton edge="end" color="secondary" onClick={toggleDrawer(true)}>
+                                <MenuIcon sx={{ color: "white" }}/>
                             </IconButton>
 
                             {/* Мобильное меню (Drawer) */}
