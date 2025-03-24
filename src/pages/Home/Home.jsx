@@ -100,7 +100,7 @@ const Home = () => {
             </div>
             <h1 className="header" id='services' style={{color: 'black'}}>{localization.services.title}</h1>
             <div className="services">
-            <div className="service-card">
+                <div className="service-card">
                     <div>
                         <object type="image/svg+xml" width="100px" height="100px" data={services_choice}></object>
                     </div>
@@ -149,7 +149,8 @@ const Home = () => {
             <h1 className="header" style={{color: 'black'}}>{localization.about.title}</h1>
             <div className="about">
                 <img className="about-img" src={about_img} alt="Aleh Miliakou"/>
-                <p className="about-text"><span style={{color: "var(--accent-color)"}}><b>{localization.about.name}</b></span>— {localization.about.description}</p>
+                <p className="about-text"><span style={{color: "var(--accent-color)"}}><b>{localization.about.name}</b></span>— {localization.about.description}
+                </p>
             </div>
 
             <h1 className="header" style={{color: 'black'}} id='workflow'>{localization.workflow.title}</h1>
@@ -160,11 +161,57 @@ const Home = () => {
             </div>
 
             <div className="preview-catalog">
-                <p className="catalog-preview-title">{localization.catalog.title} <button className="view-all-button" onClick={() => navigate('/catalog')}>{localization.catalog.button}</button>
+                <p className="catalog-preview-title">{localization.catalog.title}
+                    <button className="view-all-button"
+                            onClick={() => navigate('/catalog')}>{localization.catalog.button}</button>
                 </p>
                 <PreviewSwiper products={products}/>
             </div>
 
+            {/*<div className="reviews" id="reviews">*/}
+            {/*    <h1 className="reviews-title">{localization.reviews.title}</h1>*/}
+            {/*    <div className="reviews-list">*/}
+            {/*        <div className="review-card">*/}
+            {/*            <div className="review-card-head">*/}
+            {/*                <div className="review-card-img-container">*/}
+            {/*                    <img className="review-card-img" src={review_img_1} alt="author avatar"/>*/}
+            {/*                </div>*/}
+            {/*                <div className="review-card-author">*/}
+            {/*                    <p className="review-card-date">{localization.reviews.items[0].date}</p>*/}
+            {/*                    <p className="review-card-author-name">{localization.reviews.items[0].author}</p>*/}
+            {/*                </div>*/}
+            {/*                <p className="review-card-rating">★★★★★</p>*/}
+            {/*            </div>*/}
+            {/*            <p className="review-card-text">{localization.reviews.items[0].text}</p>*/}
+            {/*        </div>*/}
+            {/*        <div className="review-card">*/}
+            {/*            <div className="review-card-head">*/}
+            {/*                <div className="review-card-img-container">*/}
+            {/*                    <img className="review-card-img" src={review_img_2} alt="author avatar"/>*/}
+            {/*                </div>*/}
+            {/*                <div className="review-card-author">*/}
+            {/*                    <p className="review-card-date">{localization.reviews.items[1].date}</p>*/}
+            {/*                    <p className="review-card-author-name">{localization.reviews.items[1].author}</p>*/}
+            {/*                </div>*/}
+            {/*                <p className="review-card-rating">★★★★★</p>*/}
+            {/*            </div>*/}
+            {/*            <p className="review-card-text">{localization.reviews.items[1].text}</p>*/}
+            {/*        </div>*/}
+            {/*        <div className="review-card">*/}
+            {/*            <div className="review-card-head">*/}
+            {/*                <div className="review-card-img-container">*/}
+            {/*                    <img className="review-card-img" src={review_img_3} alt="author avatar"/>*/}
+            {/*                </div>*/}
+            {/*                <div className="review-card-author">*/}
+            {/*                    <p className="review-card-date">{localization.reviews.items[2].date}</p>*/}
+            {/*                    <p className="review-card-author-name">{localization.reviews.items[2].author}</p>*/}
+            {/*                </div>*/}
+            {/*                <p className="review-card-rating">★★★★★</p>*/}
+            {/*            </div>*/}
+            {/*            <p className="review-card-text">{localization.reviews.items[2].text}</p>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
             <div className="reviews" id="reviews">
                 <h1 className="reviews-title">{localization.reviews.title}</h1>
                 <div className="reviews-list">
