@@ -490,26 +490,24 @@
     padding: 20px;
     border: 1px solid lightgrey;
 
-    position: relative;
-
     background-color: rgba(0,0,0,0.8);
     border-radius: 20px;
 }
 
 .review-card-head{
-    position: absolute;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    width: auto;
+    justify-content: start;
+    width: 300px;
     text-align: left;
-    bottom: 10px;
-    left: 30px;
 
     border: 1px solid white;
     border-radius: 15px;
-    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .review-card-author{

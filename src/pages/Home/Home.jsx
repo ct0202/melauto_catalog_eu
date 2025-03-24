@@ -216,6 +216,7 @@ const Home = () => {
                 <h1 className="reviews-title">{localization.reviews.title}</h1>
                 <div className="reviews-list">
                     <div className="review-card">
+
                         <div className="review-card-head">
                             <div className="review-card-img-container">
                                 <img className="review-card-img" src={review_img_1} alt="author avatar"/>
@@ -240,6 +241,7 @@ const Home = () => {
                             <p className="review-card-rating">★★★★★</p>
                         </div>
                         <p className="review-card-text">{localization.reviews.items[1].text}</p>
+
                     </div>
                     <div className="review-card">
                         <div className="review-card-head">
@@ -253,6 +255,7 @@ const Home = () => {
                             <p className="review-card-rating">★★★★★</p>
                         </div>
                         <p className="review-card-text">{localization.reviews.items[2].text}</p>
+
                     </div>
                 </div>
             </div>
